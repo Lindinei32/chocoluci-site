@@ -33,11 +33,7 @@ export default function WhyUsSection() {
               Há mais de 10 anos criando momentos especiais através de doces únicos e personalizados. Cada produto é feito com ingredientes selecionados e muito carinho.
             </p>
             
-            {/* 
-              A MUDANÇA ESTÁ AQUI:
-              - 'mx-auto lg:mx-0': Centraliza a lista em telas pequenas e alinha à esquerda em telas grandes.
-              - 'max-w-md': Define uma largura máxima para a lista para não ficar muito larga em telas médias.
-            */}
+            
             <ul className="mt-6 space-y-3 max-w-md mx-auto lg:mx-0">
               {features.map((feature) => (
                 // 'justify-start' garante que o texto e o ícone fiquem alinhados à esquerda.
@@ -52,7 +48,7 @@ export default function WhyUsSection() {
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="bg-white/70 rounded-2xl shadow-lg p-4 text-center backdrop-blur-sm">
-                <div className="text-3xl md:text-4xl text-[#5D4037] inline-block mb-2">
+                <div className="text-3xl md:text-4xl text-[#5D4037] inline-block mb-2 text-pink-500">
                   {stat.icon}
                 </div>
                 {/* Tamanho da fonte ajustado para telas pequenas e grandes */}
