@@ -1,4 +1,4 @@
-// /app/components/ContactSection.tsx - VERSÃO COM ÍCONES MAIORES
+// /app/components/ContactSection.tsx - VERSÃO RESPONSIVA
 
 import Image from 'next/image';
 import { FaComments, FaClock, FaMotorcycle } from 'react-icons/fa';
@@ -10,7 +10,7 @@ export default function ContactSection() {
   const instagramUrl = "https://www.instagram.com/chocoluci2024/";
 
   return (
-    <section className="bg-[#F9EBEB] w-full py-20">
+    <section className="bg-[#F9EBEB] w-full pt-20 pb-10"> {/* Diminuído o padding inferior */}
       <div className="container mx-auto px-4 text-center">
         
         <h2 className="text-4xl font-bold text-[#5D4037]">Pronto para Sua Encomenda?</h2>
@@ -20,54 +20,36 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
           
-          <div className="bg-white/70 rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center backdrop-blur-sm">
+          <div className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-8 flex flex-col items-center justify-center backdrop-blur-sm">
             <FaComments size={32} className="text-[#5D4037]" />
-            <h3 className="text-2xl font-semibold text-[#5D4037] mt-4">Atendimento Personalizado</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#5D4037] mt-4">Atendimento Personalizado</h3>
             <p className="text-[#795548] mt-2">Criamos sua encomenda via chat</p>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 bg-[#F06292] text-white font-semibold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105 w-full"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 bg-[#F06292] text-white font-semibold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105 w-full">
               <FaComments />
               Iniciar Conversa
             </a>
           </div>
 
-          <div className="bg-white/70 rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center backdrop-blur-sm">
-            <Image
-              src="/Instagram.svg"
-              alt="Ícone do Instagram"
-              width={56}
-              height={56}
-            />
-            <h3 className="text-2xl font-semibold text-[#5D4037] mt-4">Acompanhe Nossos Trabalhos</h3>
+          <div className="bg-white/70 rounded-2xl shadow-lg p-6 md:p-8 flex flex-col items-center justify-center backdrop-blur-sm">
+            <Image src="/Instagram.svg" alt="Ícone do Instagram" width={56} height={56} />
+            <h3 className="text-xl md:text-2xl font-semibold text-[#5D4037] mt-4">Acompanhe Nossos Trabalhos</h3>
             <p className="text-[#795548] mt-2">Veja nossas novidades no Instagram</p>
-            <a
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105 w-full"
-            >
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="mt-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105 w-full">
               Visitar Perfil
             </a>
           </div>
 
         </div>
-
-        {/* 
-          A MUDANÇA ESTÁ AQUI:
-          - A propriedade 'size={20}' foi adicionada aos ícones.
-        */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-x-8 gap-y-4 mt-12 text-lg text-[#795548]">
-          <div className="flex items-center gap-2">
+        
+        {/* A MUDANÇA ESTÁ AQUI: Ajustes de fonte e espaçamento para mobile */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-x-8 gap-y-4 mt-12 text-base text-[#795548] font-semibold">
+          <div className="flex items-center gap-3">
             <FaClock size={20} />
-            <span className='font-bold'>Atendimento: Seg-Sex 8h às 18h</span>
+            <span>Atendimento: Seg-Sex 8h às 18h</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <FaMotorcycle size={20} />
-            <span className='font-bold'>Entregamos Toda Curitiba e Região Metropolitanda</span>
+            <span>Entregamos para Curitiba e Região</span>
           </div>
         </div>
 
