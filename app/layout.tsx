@@ -1,7 +1,7 @@
-// /app/layout.tsx - VERSÃO CORRIGIDA
+// /app/layout.tsx
 
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Montserrat } from 'next/font/google'; // Fonte correta
 import './globals.css';
 
 const montserrat = Montserrat({ 
@@ -14,18 +14,10 @@ export const metadata = {
   description: 'Cestas, Chocolates e Panetones Artesanais',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-BR">
-      {/* 
-        A MUDANÇA ESTÁ AQUI:
-        - bg-[#F9EBEB]: Define o fundo rosa claro para TODA a página.
-        - text-[#5D4037]: Define a cor de texto padrão como o marrom escuro.
-      */}
+      {/* Classe da fonte e cor de fundo corretas */}
       <body className={`${montserrat.className} bg-[#F9EBEB] text-[#5D4037]`}>
         <main>{children}</main>
       </body>
